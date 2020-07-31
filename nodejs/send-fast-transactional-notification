@@ -1,0 +1,23 @@
+const pusheToken = "XXXXXXX";
+const pusheUrl = `https://api.pushe.co/v2/messaging/rapid/`;	
+
+let options = {
+	    headers: {
+	        'Authorization': 'Token ' +pusheToken,
+	        'Content-Type': 'application/json'
+	    }
+	};
+
+	let req = {
+	    app_id: 'XXXX',
+	    data: {
+	        title: "title",
+	        content: "content".
+	    },
+	    device_id: [device_id , device_id , device_id]
+	};
+
+ axios.post(pusheUrl, req, options)
+   .then(({data}) => console.log(data))
+    .catch(err => console.error(err));
+ 
